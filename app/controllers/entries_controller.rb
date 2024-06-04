@@ -1,9 +1,8 @@
 class EntriesController < ApplicationController
 
   def new
-    @entry = Entry.new
   end
-  private
+
   def create
     @user = User.find_by({ "id" => session["user_id"] })
     if  @user != nil
